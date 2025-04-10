@@ -1640,10 +1640,10 @@ def map_maker():
                             shape.x2 += game.change_x
                             shape.y2 += game.change_y
 
-                            if not mouse_lock[0]:
-                                mouse_lock = (True, shape, shape.x2, shape.y2, game.x_mouse, game.y_mouse)
+                            if not game.mouse_lock[0]:
+                                game.mouse_lock = (True, shape, shape.x2, shape.y2, game.x_mouse, game.y_mouse)
                         else:
-                            mouse_lock = (False, None, None, None, 0, 0)
+                            game.mouse_lock = (False, None, None, None, 0, 0)
                             game.altering_point_2 = False
                             game.expanding = False
 
